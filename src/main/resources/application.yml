@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: luv2code
+  # lazy-initialization
+#  main:
+#    lazy-initialization: true
+  #    Starter-Security details
+  security:
+    user:
+      name: admin
+      password: admin
+
+# custom properties for FunRestController
+coach:
+  name: Endou Mamoru
+team:
+  name: Tiger
+
+# actuator endpoint exposure
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: sbom
+  info:
+    env:
+      enabled: true
+
+# info endpoint details to be printed
+info:
+  app:
+    name: Luv2Code
+    description: A Crazy and Fun app
+    version: 2.0
+
+# server properties
+server:
+  port: 7070
+  servlet:
+    context-path: /my-silly-app
+
+# logging levels
+logging: 
+  file:
+    name: my-crazy-app.log
+
